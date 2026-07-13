@@ -4,19 +4,22 @@
     "slug": "mahanadi-harvester",
     "version": "1.0.0",
     "orientation": "portrait",
-    
     "userInterfaceStyle": "light",
+
     "splash": {
-  "resizeMode": "contain",
-  "backgroundColor": "#ffffff"
-    }
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+
     "assetBundlePatterns": [
       "**/*"
     ],
+
     "android": {
       "package": "com.mahanadi.harvester",
       "versionCode": 1
     },
+
     "web": {
       "favicon": "./assets/icon.png"
     }
