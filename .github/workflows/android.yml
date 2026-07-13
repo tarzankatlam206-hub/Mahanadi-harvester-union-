@@ -28,7 +28,7 @@ jobs:
       - name: Check project
         run: npx expo-doctor
 
-      - name:       Build APK
-                env:
-                    EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-                run: eas build --platform android --profile preview --non-interactive
+            - name: Build APK
+                        env:
+                              EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+                        run: eas build --platform android --profile preview --non-interactive
