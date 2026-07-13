@@ -1,36 +1,48 @@
 import React from "react";
-import { View, Text, StyleSheet, ScrollView } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function DashboardScreen() {
+  const navigation = useNavigation<any>();
+
   return (
     <ScrollView style={styles.container}>
-      <Text style={styles.title}>
-        महानदी हार्वेस्टर मालिक कल्याण संघ
-      </Text>
+      <Text style={styles.title}>डैशबोर्ड</Text>
 
-      <Text style={styles.subtitle}>
-        जिला कांकेर, छत्तीसगढ़
-      </Text>
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => navigation.navigate("Members")}
+      >
+        <Text style={styles.cardText}>👥 सदस्य सूची</Text>
+      </TouchableOpacity>
 
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>👥 कुल सदस्य</Text>
-        <Text style={styles.cardValue}>0</Text>
-      </View>
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => navigation.navigate("Notice")}
+      >
+        <Text style={styles.cardText}>📢 नोटिस बोर्ड</Text>
+      </TouchableOpacity>
 
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>📢 नोटिस</Text>
-        <Text style={styles.cardValue}>कोई नया नोटिस नहीं</Text>
-      </View>
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => navigation.navigate("Fees")}
+      >
+        <Text style={styles.cardText}>💰 सदस्यता शुल्क</Text>
+      </TouchableOpacity>
 
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>💰 सदस्यता शुल्क</Text>
-        <Text style={styles.cardValue}>₹0</Text>
-      </View>
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => navigation.navigate("Profile")}
+      >
+        <Text style={styles.cardText}>👤 मेरी प्रोफ़ाइल</Text>
+      </TouchableOpacity>
 
-      <View style={styles.card}>
-        <Text style={styles.cardTitle}>🚜 पंजीकृत हार्वेस्टर</Text>
-        <Text style={styles.cardValue}>0</Text>
-      </View>
+      <TouchableOpacity
+        style={styles.card}
+        onPress={() => navigation.navigate("Contact")}
+      >
+        <Text style={styles.cardText}>☎️ संपर्क करें</Text>
+      </TouchableOpacity>
     </ScrollView>
   );
 }
@@ -39,36 +51,25 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#F4F6F8",
-    padding: 15,
+    padding: 20,
   },
   title: {
-    fontSize: 24,
+    fontSize: 28,
     fontWeight: "bold",
     textAlign: "center",
     color: "#0B6E4F",
-    marginTop: 20,
-  },
-  subtitle: {
-    textAlign: "center",
-    fontSize: 16,
     marginBottom: 20,
-    color: "#555",
   },
   card: {
-    backgroundColor: "#FFFFFF",
-    padding: 20,
-    borderRadius: 12,
+    backgroundColor: "#0B6E4F",
+    padding: 18,
+    borderRadius: 10,
     marginBottom: 15,
-    elevation: 3,
   },
-  cardTitle: {
+  cardText: {
+    color: "#FFFFFF",
     fontSize: 18,
     fontWeight: "bold",
-    marginBottom: 8,
-  },
-  cardValue: {
-    fontSize: 22,
-    color: "#0B6E4F",
-    fontWeight: "bold",
+    textAlign: "center",
   },
 });
