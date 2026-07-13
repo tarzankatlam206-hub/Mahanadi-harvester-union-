@@ -4,6 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import HomeScreen from "../screens/HomeScreen";
 import LoginScreen from "../screens/LoginScreen";
 import RegisterScreen from "../screens/RegisterScreen";
+import DashboardScreen from "../screens/DashboardScreen";
+import MembersScreen from "../screens/MembersScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +36,18 @@ export default function AppNavigator() {
         name="Register"
         component={RegisterScreen}
         options={{ title: "सदस्य पंजीकरण" }}
+      />
+
+      <Stack.Screen
+        name="Dashboard"
+        component={DashboardScreen}
+        options={{ title: "डैशबोर्ड" }}
+      />
+
+      <Stack.Screen
+        name="Members"
+        component={MembersScreen}
+        options={{ title: "सदस्य सूची" }}
       />
     </Stack.Navigator>
   );
