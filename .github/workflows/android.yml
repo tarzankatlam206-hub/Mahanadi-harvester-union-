@@ -8,12 +8,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - run: npm install
+      - name: Install dependencies
+        run: npm install
 
-      - run: npx expo export
+      - name: Install Expo CLI
+        run: npm install -g eas-cli
+
+      - name: Check Expo
+        run: npx expo --version
+
+      - name: Build APK
+        run: eas build --platform android --profile preview --non-interactive
