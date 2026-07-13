@@ -26,4 +26,5 @@ jobs:
         run: npx expo --version
 
       - name: Build APK
-        run: eas build --platform android --profile preview --non-interactive
+        - name: Check project
+  run: npx expo doctor
