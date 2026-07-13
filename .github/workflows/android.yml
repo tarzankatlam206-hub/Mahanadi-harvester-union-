@@ -26,4 +26,4 @@ jobs:
         run: npx expo --version
 
       - name: Check project
-        run: npx expo doctor
+        run: npx expo-doctor
