@@ -1,0 +1,25 @@
+{
+  "expo": {
+    "name": "Mahanadi Harvester",
+    "slug": "mahanadi-harvester",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/logo.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "android": {
+      "package": "com.mahanadi.harvester",
+      "versionCode": 1
+    },
+    "web": {
+      "favicon": "./assets/icon.png"
+    }
+  }
+}
