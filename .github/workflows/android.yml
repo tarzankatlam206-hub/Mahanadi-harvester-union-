@@ -25,6 +25,5 @@ jobs:
       - name: Check Expo
         run: npx expo --version
 
-      - name: Build APK
-        - name: Check project
-  run: npx expo doctor
+      - name: Check project
+        run: npx expo doctor
