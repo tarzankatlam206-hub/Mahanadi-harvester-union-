@@ -28,11 +28,6 @@ jobs:
       - name: Check project
         run: npx expo-doctor
 
-      - name: Initialize EAS Project
-        env:
-          EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
-        run: eas init --force --non-interactive
-
       - name: Build APK
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
