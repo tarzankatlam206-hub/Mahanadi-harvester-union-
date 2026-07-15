@@ -1,12 +1,16 @@
-import "react-native-gesture-handler";
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import AppNavigator from "./navigation/AppNavigator";
+import { View, Text } from "react-native";
 
 export default function App() {
   return (
-    <NavigationContainer>
-      <AppNavigator />
-    </NavigationContainer>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center"
+      }}
+    >
+      <Text style={{ fontSize: 24 }}>App Working</Text>
+    </View>
   );
 }
